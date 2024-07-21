@@ -1,4 +1,4 @@
-package com.example.temp_lepto
+package com.leptoCheck
 
 import io.flutter.embedding.android.FlutterActivity
 

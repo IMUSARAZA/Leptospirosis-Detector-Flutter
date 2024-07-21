@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:quickalert/models/quickalert_type.dart';
 import 'package:quickalert/widgets/quickalert_dialog.dart';
 import 'package:temp_lepto/Navigation.dart';
-import 'package:http/http.dart' as http;
 
 class CheckNowScreen extends StatefulWidget {
   @override
@@ -264,7 +263,7 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
                 }),
                 const SizedBox(height: 20),
                 // Dropdown for Fever
-                buildDropdown("Water", waterDropDownValue, waterExposure,
+                buildDropdown("Water Exposure", waterDropDownValue, waterExposure,
                     (String? newValue) {
                   setState(() {
                     waterDropDownValue = newValue!;
@@ -273,7 +272,7 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
                 }),
                 const SizedBox(height: 20),
                 // Dropdown for Fever
-                buildDropdown("White Blood Cells", whiteBloodCellDropDownValue,
+                buildDropdown("White Blood Cells Count", whiteBloodCellDropDownValue,
                     whiteBloodCell, (String? newValue) {
                   setState(() {
                     whiteBloodCellDropDownValue = newValue!;
@@ -283,7 +282,7 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
                 const SizedBox(height: 20),
                 // Dropdown for Fever
                 buildDropdown(
-                    "Platelets", plateletCountDropDownValue, plateletCount,
+                    "Platelets Count", plateletCountDropDownValue, plateletCount,
                     (String? newValue) {
                   setState(() {
                     plateletCountDropDownValue = newValue!;
@@ -382,14 +381,14 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
 
                       // GET RESPONSE FROM API // 
 
-                      var response = await http.get(Uri.parse(
-                          "https://api.ipify.org?format=json"));
+                      // var response = await http.get(Uri.parse(
+                      //     "https://api.ipify.org?format=json"));
 
-                      if (response.statusCode == 200) {
+                      // if (response.statusCode == 200) {
 
-                      } else {
-                        print('Failed to laod data');
-                      }
+                      // } else {
+                      //   print('Failed to laod data');
+                      // }
 
                      checkAndShowAlert();
                     },

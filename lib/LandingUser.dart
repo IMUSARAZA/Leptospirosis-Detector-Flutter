@@ -19,7 +19,7 @@ class _LandingUserState extends State<LandingUser> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            height: screenHeight * 1,
+            height: screenHeight + 100,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
@@ -36,13 +36,13 @@ class _LandingUserState extends State<LandingUser> {
               children: [
                 Image.asset(
                   'assets/3D_Doctor.png',
-                  height: screenHeight * 0.5,
+                  height: screenHeight * 0.45,
                   fit: BoxFit.cover,
                 ),
                 const SizedBox(height: 15),
                 Center(
                   child: Container(
-                    height: screenHeight * 0.35,
+                    height: screenHeight * 0.5,
                     width: screenWidth * 0.9,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
@@ -66,7 +66,7 @@ class _LandingUserState extends State<LandingUser> {
                         ),
                         Padding(
                           padding:
-                              EdgeInsets.fromLTRB(0, screenHeight * 0.03, 0, 0),
+                              EdgeInsets.fromLTRB(10, screenHeight * 0.03, 10, 0),
                           child: const Text(
                             'We will walk each step with you at \nyour time of crisis',
                             style: TextStyle(
@@ -80,7 +80,7 @@ class _LandingUserState extends State<LandingUser> {
                         ),
                         Padding(
                             padding: EdgeInsets.fromLTRB(
-                                0, screenHeight * 0.05, 0, 0),
+                                0, screenHeight * 0.03, 0, 0),
                             child: ElevatedButton(
                               style: ButtonStyle(
                                 backgroundColor:

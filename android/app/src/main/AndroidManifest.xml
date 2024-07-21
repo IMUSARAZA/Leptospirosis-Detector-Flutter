@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="temp_lepto"
+        android:label="Lepto Check"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

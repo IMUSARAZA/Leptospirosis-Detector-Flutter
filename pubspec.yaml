@@ -37,13 +37,19 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_lints: 
   quickalert: 
-  easy_splash_screen: 
   http:
   provider:
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons:
+  
+flutter_launcher_icons:
+  image_path: "assets/applogo.png"
+  android: true    
+  ios: true
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
