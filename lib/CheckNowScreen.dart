@@ -372,7 +372,7 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
                 Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.red,
+                      backgroundColor: Colors.red,
                       padding: const EdgeInsets.symmetric(
                           horizontal: 50, vertical: 20),
                       shape: const StadiumBorder(),
