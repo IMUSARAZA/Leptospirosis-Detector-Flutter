@@ -199,7 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             padding: EdgeInsets.fromLTRB(
                                 0, screenHeight * 0.01, 0, 0),
                             child: Text(
-                              'Symtoms',
+                              'Symptoms',
                               style: TextStyle(
                                 fontSize: screenHeight * 0.02,
                                 fontWeight: FontWeight.w600,
