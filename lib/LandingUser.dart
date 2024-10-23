@@ -16,6 +16,9 @@ class _LandingUserState extends State<LandingUser> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF6E83CA),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
@@ -42,7 +45,7 @@ class _LandingUserState extends State<LandingUser> {
                 const SizedBox(height: 15),
                 Center(
                   child: Container(
-                    height: screenHeight * 0.5,
+                    height: screenHeight * 0.44,
                     width: screenWidth * 0.9,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),

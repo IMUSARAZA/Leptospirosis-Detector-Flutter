@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:temp_lepto/LandingUser.dart';
 import 'package:temp_lepto/Navigation.dart';
-import 'Widget/splah.dart';
 
 
 void main(){
@@ -23,7 +23,7 @@ class _MyappState extends State<Myapp> {
       create: (context) => NavigationProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SplashPage(),
+        home: LandingUser(),
     ),
     );
     

@@ -54,7 +54,8 @@ class Description extends StatelessWidget {
                         height: 10,
                       ),
                       Text(
-                        'Leptospirosis is a bacterial infection caused by the Leptospira bacteria, commonly found in water contaminated with animal urine. Humans can contract the disease through direct contact with infected animals or contaminated environments. \n \nLeptospira genus,poses a significant threat to global health .It is a  disease spread through the bite of an animal or direct contact with animal tissues and fluids, is not typically considered a significant threat to human health. This interpretation addresses the challenges in identifying leptospirosis due to broad clinical manifestations, thereby misdiagnosing it',
+                                                'Leptospirosis is a bacterial infection caused by the Leptospira bacteria, commonly found in water contaminated with animal urine. Humans can contract the disease through direct contact with infected animals or contaminated environments. \n \nLeptospira genus, poses a significant threat to global health .It is a  disease spread through the bite of an animal or direct contact with animal tissues and fluids, is not typically considered a significant threat to human health. This interpretation addresses the challenges in identifying leptospirosis due to broad clinical manifestations, thereby misdiagnosing it',
+
                         style: TextStyle(fontSize: 20, color: Colors.blue.shade900),
                         textAlign: TextAlign.justify,
                       ),

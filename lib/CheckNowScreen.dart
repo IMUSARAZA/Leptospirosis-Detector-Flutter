@@ -178,6 +178,7 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
       },
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: const Text("LeptoCheck - Assess Your Risk"),
           backgroundColor: const Color(0xFF6E83CA),
         ),

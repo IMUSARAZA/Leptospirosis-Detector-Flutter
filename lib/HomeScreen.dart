@@ -18,17 +18,16 @@ class _HomeScreenState extends State<HomeScreen> {
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF6E83CA),
-        title: const Center(
-          child: Text(
-            'Welcome To Lepto Check',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
-        ),
-      ),
+  backgroundColor: const Color(0xFF6E83CA),
+  centerTitle: true,
+  title: const Text(
+    'Welcome To Lepto Check',
+    style: TextStyle(
+      fontSize: 20,
+      color: Colors.white,
+    ),
+  ),
+),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,13 +75,15 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(screenWidth * 0.07, 0, 0, 0),
-              child: Text(
-                'Information about Leptospirosis',
-                style: TextStyle(
-                  fontSize: screenHeight * 0.025,
-                  fontWeight: FontWeight.w800,
-                  color:  Colors.blue.shade900,
+              padding: EdgeInsets.fromLTRB(screenWidth * 0.07, 0, 0, screenWidth * 0.07),
+              child: Center(
+                child: Text(
+                  'Information about Leptospirosis',
+                  style: TextStyle(
+                    fontSize: screenHeight * 0.023,
+                    fontWeight: FontWeight.w800,
+                    color:  Colors.blue.shade900,
+                  ),
                 ),
               ),
             ),
