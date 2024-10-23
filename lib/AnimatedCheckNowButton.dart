@@ -54,8 +54,7 @@ class _AnimatedCheckNowButtonState extends State<AnimatedCheckNowButton>
       child: ElevatedButton(
         onPressed: widget.onPressed,
         style: ElevatedButton.styleFrom(
-          primary: const Color(0xFF6E83CA),
-          onPrimary: Colors.white,
+          backgroundColor: const Color(0xFF6E83CA),
           shadowColor: const Color(0xFF6E83CA),
           elevation: 10,
           shape: RoundedRectangleBorder(
