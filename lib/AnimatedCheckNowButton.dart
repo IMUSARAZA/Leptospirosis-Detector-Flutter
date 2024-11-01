@@ -67,6 +67,7 @@ class _AnimatedCheckNowButtonState extends State<AnimatedCheckNowButton>
           style: TextStyle(
             fontSize: 20.0,
             fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
       ),

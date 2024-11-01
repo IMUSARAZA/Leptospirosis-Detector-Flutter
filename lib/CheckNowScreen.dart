@@ -133,7 +133,7 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
         Text(
           title,
           style: const TextStyle(
-              fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+              fontSize: 18, fontWeight: FontWeight.bold, color: const Color(0xFF6E83CA)),
         ),
         Container(
           margin: const EdgeInsets.only(top: 8, bottom: 16),
@@ -158,7 +158,7 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
                 );
               }).toList(),
               onChanged: onChanged,
-              style: const TextStyle(color: Colors.blue, fontSize: 18),
+              style: const TextStyle(color: const Color(0xFF6E83CA), fontSize: 18),
               dropdownColor: Colors.white,
             ),
           ),
@@ -178,22 +178,29 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
       },
       child: Scaffold(
         appBar: AppBar(
-          centerTitle: true,
-          title: const Text("LeptoCheck - Assess Your Risk"),
+          automaticallyImplyLeading: false,
           backgroundColor: const Color(0xFF6E83CA),
+          centerTitle: true,
+          title: const Text(
+            'Leptopirosis Prediction',
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+            ),
+          ),
         ),
         body: Container(
           padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
-                const Color(0xFF6E83CA).withOpacity(0.5),
-                const Color(0xFF6E83CA).withOpacity(1.0)
-              ],
-            ),
-          ),
+          // decoration: BoxDecoration(
+          //   gradient: LinearGradient(
+          //     begin: Alignment.topCenter,
+          //     end: Alignment.bottomCenter,
+          //     colors: [
+          //       const Color(0xFF6E83CA).withOpacity(0.5),
+          //       const Color(0xFF6E83CA).withOpacity(1.0)
+          //     ],
+          //   ),
+          // ),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -264,7 +271,8 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
                 }),
                 const SizedBox(height: 20),
                 // Dropdown for Fever
-                buildDropdown("Water Exposure", waterDropDownValue, waterExposure,
+                buildDropdown(
+                    "Water Exposure", waterDropDownValue, waterExposure,
                     (String? newValue) {
                   setState(() {
                     waterDropDownValue = newValue!;
@@ -273,7 +281,9 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
                 }),
                 const SizedBox(height: 20),
                 // Dropdown for Fever
-                buildDropdown("White Blood Cells Count", whiteBloodCellDropDownValue,
+                buildDropdown(
+                    "White Blood Cells Count",
+                    whiteBloodCellDropDownValue,
                     whiteBloodCell, (String? newValue) {
                   setState(() {
                     whiteBloodCellDropDownValue = newValue!;
@@ -282,9 +292,8 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
                 }),
                 const SizedBox(height: 20),
                 // Dropdown for Fever
-                buildDropdown(
-                    "Platelets Count", plateletCountDropDownValue, plateletCount,
-                    (String? newValue) {
+                buildDropdown("Platelets Count", plateletCountDropDownValue,
+                    plateletCount, (String? newValue) {
                   setState(() {
                     plateletCountDropDownValue = newValue!;
                     plateletCountDropDownFinalValue = newValue;
@@ -379,8 +388,7 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
                       shape: const StadiumBorder(),
                     ),
                     onPressed: () async {
-
-                      // GET RESPONSE FROM API // 
+                      // GET RESPONSE FROM API //
 
                       // var response = await http.get(Uri.parse(
                       //     "https://api.ipify.org?format=json"));
@@ -391,7 +399,7 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
                       //   print('Failed to laod data');
                       // }
 
-                     checkAndShowAlert();
+                      checkAndShowAlert();
                     },
                     child: const Text("Check For Results",
                         style: TextStyle(color: Colors.white, fontSize: 20)),
@@ -451,14 +459,13 @@ class _CheckNowScreenState extends State<CheckNowScreen> {
             text:
                 'You are Safe but your age group has the most chances of getting affected by this disease',
           );
-        }
-        else{
-        await QuickAlert.show(
-          context: context,
-          type: QuickAlertType.success,
-          title: 'No',
-          text: 'You are not diagnosed for\nleptospirosis',
-        );
+        } else {
+          await QuickAlert.show(
+            context: context,
+            type: QuickAlertType.success,
+            title: 'No',
+            text: 'You are not diagnosed for\nleptospirosis',
+          );
         }
       }
     }

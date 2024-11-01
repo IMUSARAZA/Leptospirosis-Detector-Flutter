@@ -10,19 +10,29 @@ class LandingUser extends StatefulWidget {
 }
 
 class _LandingUserState extends State<LandingUser> {
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    precacheImage(AssetImage('assets/3D_Doctor.png'), context);
+  }
+
+
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF6E83CA),
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            height: screenHeight + 100,
+            height: screenHeight,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
@@ -45,7 +55,7 @@ class _LandingUserState extends State<LandingUser> {
                 const SizedBox(height: 15),
                 Center(
                   child: Container(
-                    height: screenHeight * 0.44,
+                    height: screenHeight * 0.35,
                     width: screenWidth * 0.9,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),

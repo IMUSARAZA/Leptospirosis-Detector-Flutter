@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:temp_lepto/CheckNowScreen.dart';
 import 'package:temp_lepto/HomeScreen.dart';
 import 'package:temp_lepto/desc.dart';
-import 'package:temp_lepto/SymtomsScreen.dart';
+import 'package:temp_lepto/SymptomsScreen.dart';
 
 
 class NavigationProvider with ChangeNotifier {
@@ -17,22 +17,6 @@ class NavigationProvider with ChangeNotifier {
   }
 }
 
-class Myapp extends StatefulWidget {
-  const Myapp({Key? key}) : super(key: key);
-
-  @override
-  State<Myapp> createState() => _MyappState();
-}
-
-class _MyappState extends State<Myapp> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Navigation(),
-    );
-  }
-}
 
 class Navigation extends StatelessWidget {
   @override

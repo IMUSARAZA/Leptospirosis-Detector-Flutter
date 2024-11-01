@@ -2,9 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:temp_lepto/AnimatedCheckNowButton.dart';
-
 import 'package:temp_lepto/Navigation.dart';
-
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -13,21 +11,29 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Preload the image
+    precacheImage(AssetImage('assets/homeDoc.png'), context);
+  }
+
+  @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-  backgroundColor: const Color(0xFF6E83CA),
-  centerTitle: true,
-  title: const Text(
-    'Welcome To Lepto Check',
-    style: TextStyle(
-      fontSize: 20,
-      color: Colors.white,
-    ),
-  ),
-),
+        automaticallyImplyLeading: false,
+        backgroundColor: const Color(0xFF6E83CA),
+        centerTitle: true,
+        title: const Text(
+          'Welcome To Lepto Check',
+          style: TextStyle(
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,8 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
-                        padding:
-                            EdgeInsets.fromLTRB(screenWidth * 0.03, 0, 0, 0),
+                        padding: EdgeInsets.fromLTRB(screenWidth * 0.03, 0, 0, 0),
                         child: Text(
                           'Trusted Care\nWith Us',
                           style: TextStyle(
@@ -110,8 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 final navigationProvider =
                                     Provider.of<NavigationProvider>(context,
                                         listen: false);
-                                navigationProvider.selectedIndex =
-                                    1; 
+                                navigationProvider.selectedIndex = 1;
                               },
                               child: Container(
                                 decoration: BoxDecoration(
@@ -123,8 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding:
-                                          const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                       child: Icon(
                                         Icons.book,
                                         color: Colors.white,
@@ -137,8 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(
-                                0, screenHeight * 0.01, 0, 0),
+                            padding: EdgeInsets.fromLTRB(0, screenHeight * 0.01, 0, 0),
                             child: Text(
                               'Description',
                               style: TextStyle(
@@ -170,8 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 final navigationProvider =
                                     Provider.of<NavigationProvider>(context,
                                         listen: false);
-                                navigationProvider.selectedIndex =
-                                    2; 
+                                navigationProvider.selectedIndex = 2;
                               },
                               child: Container(
                                 decoration: BoxDecoration(
@@ -183,8 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Padding(
-                                      padding:
-                                          const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                                       child: Icon(
                                         CupertinoIcons.bell_fill,
                                         color: Colors.white,
@@ -197,8 +197,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsets.fromLTRB(
-                                0, screenHeight * 0.01, 0, 0),
+                            padding: EdgeInsets.fromLTRB(0, screenHeight * 0.01, 0, 0),
                             child: Text(
                               'Symptoms',
                               style: TextStyle(
@@ -239,8 +238,7 @@ class _HomeScreenState extends State<HomeScreen> {
                    final navigationProvider =
                                     Provider.of<NavigationProvider>(context,
                                         listen: false);
-                                navigationProvider.selectedIndex =
-                                    3; 
+                                navigationProvider.selectedIndex = 3;
                   })),
             ),
           ],
